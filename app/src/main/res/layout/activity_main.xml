@@ -3,209 +3,207 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:stretchColumns="1">
+    android:stretchColumns="*">
 
-
-<TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-    <EditText
-        android:id="@+id/show_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_span="4"
-        android:gravity="end"
-        android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-        android:textSize="66sp"
-        tools:ignore="LabelFor" />
-</TableRow>
 
     <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
-        <Button
-            android:id="@+id/button_clear"
-            style="@style/Widget.AppCompat.Button.Colored"
+        <EditText
+            android:id="@+id/show_result"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:layout_span="2"
-            android:text="@string/button_label_clear"
-            android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/button_delete"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:layout_span="2"
-            android:text="@string/button_label_delete"
-            android:textSize="14sp" />
+            android:layout_height="match_parent"
+            android:layout_span="4"
+            android:gravity="end"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            tools:ignore="LabelFor" />
     </TableRow>
 
     <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/button_clear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_span="2"
+            android:text="@string/button_label_clear"
+            style="@style/Buttons.Danger" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_span="2"
+            android:text="@string/button_label_delete"
+            style="@style/Buttons.Danger"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <Button
             android:id="@+id/button_seven"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_seven"
-            android:textSize="14sp" />
+            />
 
         <Button
             android:id="@+id/button_eight"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_eight"
-            android:textSize="14sp" />
+            />
 
         <Button
             android:id="@+id/button_nine"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_nine"
-            android:textSize="14sp" />
+            />
 
         <Button
             android:id="@+id/button_plus"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_plus"
-            android:textSize="14sp" />
+            style="@style/Buttons.Operator"
+            />
     </TableRow>
+
     <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <Button
             android:id="@+id/button_four"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_four"
-            android:textSize="14sp" />
+            />
 
         <Button
             android:id="@+id/button_five"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_five"
-            android:textSize="14sp" />
+            />
 
         <Button
             android:id="@+id/button_six"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_six"
-            android:textSize="14sp" />
+            />
 
         <Button
             android:id="@+id/button_minus"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_minus"
-            android:textSize="14sp" />
+            style="@style/Buttons.Operator"
+            />
     </TableRow>
+
     <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <Button
             android:id="@+id/button_one"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_one"
-            android:textSize="14sp" />
+            />
 
         <Button
             android:id="@+id/button_two"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_two"
-            android:textSize="14sp" />
+            />
 
         <Button
             android:id="@+id/button_three"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_three"
-            android:textSize="14sp" />
+            />
 
         <Button
             android:id="@+id/button_multiplication"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_multiplication"
-            android:textSize="14sp" />
+            style="@style/Buttons.Operator"
+            />
     </TableRow>
+
     <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <Button
             android:id="@+id/button_zero"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_zero"
-            android:textSize="14sp" />
+            style="@style/Buttons.Operator"
+            />
 
         <Button
             android:id="@+id/button_decimal"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_decimal"
-            android:textSize="14sp" />
+            style="@style/Buttons.Operator"
+            />
 
         <Button
             android:id="@+id/button_equality"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_equality"
-            android:textSize="14sp" />
+            style="@style/Buttons.Operator"
+            />
 
         <Button
             android:id="@+id/button_division"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:text="@string/button_label_division"
-            android:textSize="14sp" />
+            style="@style/Buttons.Operator"
+            />
     </TableRow>
 </TableLayout>
 

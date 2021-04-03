@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnAdd, btnSub, btnMul, btnDiv;
     Button btnDot, btnClr, btnEql, btnDel;
     TextView textResult;
-    double value1, value2;
+    Double value1, value2;
     enum ACTIONS {
         ADD,
         SUBTRACT,
@@ -159,7 +159,12 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                value1 = Double.parseDouble(textResult.getText().toString());
+                try {
+                    value1 = Double.parseDouble(textResult.getText().toString());
+                } catch (Exception e) {
+                    return;
+                }
+
                 textResult.setText(null);
                 action = ACTIONS.ADD;
             }
@@ -169,7 +174,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                value1 = Double.parseDouble(textResult.getText().toString());
+                try {
+                    value1 = Double.parseDouble(textResult.getText().toString());
+                } catch (Exception e) {
+                    return;
+                }
                 textResult.setText(null);
                 action = ACTIONS.SUBTRACT;
             }
@@ -179,7 +188,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                value1 = Double.parseDouble(textResult.getText().toString());
+                try {
+                    value1 = Double.parseDouble(textResult.getText().toString());
+                } catch (Exception e) {
+                    return;
+                }
                 textResult.setText(null);
                 action = ACTIONS.MULTIPLY;
             }
@@ -189,7 +202,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                value1 = Double.parseDouble(textResult.getText().toString());
+                try {
+                    value1 = Double.parseDouble(textResult.getText().toString());
+                } catch (Exception e) {
+                    return;
+                }
                 textResult.setText(null);
                 action = ACTIONS.DIVIDE;
             }
@@ -200,7 +217,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                     double result = 0.0;
-                    value2 = Double.parseDouble(textResult.getText().toString());
+                    try {
+                        value2 = Double.parseDouble(textResult.getText().toString());
+                    } catch (Exception e) {
+                        return;
+                    }
+                    if (value1 == null || value2 == null) return;
                     switch (action) {
                         case ADD:
                             result = value1 + value2;
@@ -215,7 +237,11 @@ public class MainActivity extends AppCompatActivity {
                             result = value1 / value2;
                             break;
                     }
-                    textResult.setText(String.format("%s", result));
+                    String resultText = String.format("%s", result);
+                    if (resultText.endsWith(".0")) {
+                        resultText = resultText.replace(".0", "");
+                    }
+                    textResult.setText(resultText);
 
             }
         });
